@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="fonts/fonts.css">
+	<link href="https://fonts.googleapis.com/css?family=Thasadith" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Document</title>
+	<script>
+		window.onload = function(){
+			var tabs = Array.from(document.getElementsByClassName('tabs'));
+			tabs.forEach(tab=>{
+				tab.addEventListener('click', event=>{
+
+					tabs.forEach(tab=>{
+						tab.classList.remove('active');
+					})
+					event.target.classList.add('active');
+					var tabsBlocks = Array.from(document.getElementsByClassName('tab__block'));
+					tabsBlocks.forEach(tab=>{
+						tab.setAttribute('style', 'display:none');
+					})
+					var divId = document.getElementById(event.target.dataset.tab);
+					divId.setAttribute('style','display:block');
+					event.preventDefault();
+					return false;
+				});
+			})
+		}
+</script>
+</head>
+<body>
+	<div class="container-fluid">
+		<header style="background-image: url(img/header-bg.png);background-repeat: no-repeat;background-position: center;background-size: cover;">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="header-contacts">
+						<a class="tel" href="tel:+380973666584">+38 097 366 65 84</a>
+						<a class="mail" href="mailto:contrust.kh@gmail.com">contrust.kh@gmail.com</a>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="header-nav">
+						<ul>
+							<li><a href="#">О центре</a></li>
+							<li><a href="#">Услуги<i class="fas fa-angle-down"></i></a></li>
+							<li><a href="#">Наша команда</a></li>
+							<li><a href="#">Контакты</a></li>
+						</ul>
+					</div>	
+					<div class="header-logo">
+						<a href="#">
+							<img src="img/logo.png" alt="contrust">
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="header-icons">
+						<a href="#"><i class="fab fa-facebook"></i></a>
+						<a href="#"><i class="fab fa-instagram"></i></a>
+						<a href="#" class="mail"><i class="fas fa-envelope"></i></a>
+					</div>
+					<div class="header-title">	
+						<h1>Центр недвижимости</h1>
+						<h3>покупка, продажа, аренда квартир и домов</h3>
+						<div class="header-btn">
+							<a href="#">Перезвоните мне</a>
+						</div>
+					</div>
+				</div>	
+			</div>			
+		</header>
+		<aside>
+			<div class="block-square">
+				<div class="square-1"></div>
+				<div class="square-2"></div>
+				<div class="square-3"></div>
+				<div class="square-4"></div>
+				<div class="square-5"></div>
+				<div class="square-6"></div>
+				<div class="square-7"></div>
+				<div class="aside-logo">
+					<a href="#">
+						<img src="img/logo.png" alt="contrust">
+					</a>
+				</div>
+			</div>
+			<div class="aside-content">
+				<p>Недвижимость – самый дорогой товар в мире.
+				Мы – компания, которая умеет успешно производить операции с недвижимостью. 
+				В этом наш талант и это наше хобби</p>
+				<p>Приоритеты компании – сервис высокого уровня, комфорт для каждого клиента, положительный отзыв и рекомендации о работе</p>
+				<p>По опыту, когда один человек, заключает на себе все функции, он не может качественно выполнить каждую из них. Поэтому мы собрали команду, в которой каждый специалист своего дела:
+				</p>
+				<ul class="aside-nav">
+					<li>маркетологи</li>
+					<li>менеджеры по продажам</li>
+					<li>сотрудники call-центра</li>
+					<li>юристы</li>
+					<li>эксперты в недвижимости</li>
+				</ul>
+				<p>Благодаря этому, вместо одного человека, вы получаете команду, которая обеспечит процесс продажи или покупки недвижимости</p>
+				<p>Каждый сотрудник выполняет конкретный этап процесса, чтобы получить результат, который вас удовлетворит. Результат, которого будет тяжело достигнуть в одиночку</p>
+			</div>
+		</aside>
+		<main>
+			<section class="foto-section">
+				<div class="white-center"></div>
+				<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12">
+					<div class="foto-block">
+						<div class="col-lg-6 col-md-12 col-sm-12">
+							<div class="block first">
+								<img src="img/foto-1.png" alt="">
+								<div class="block-btn">
+									<a href="#">Квартиры</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-12 col-sm-12">
+							<div class="block second">
+								<img src="img/foto-2.png" alt="">
+								<div class="block-btn">
+									<a href="#">Дома</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12">
+					<div class="foto-block">
+						<div class="col-lg-7 col-md-12 col-sm-12">
+							<div class="block third">
+								<img src="img/foto-3.png" alt="">
+								<div class="block-btn">
+									<a href="#">Офисы</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-5 col-md-12 col-sm-12">
+							<div class="block fourth">
+								<img src="img/foto-4.png" alt="">
+								<div class="block-btn">
+									<a href="#">Участки</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>	
+			</section>
+			<section class="sale">
+				<div class="tabs-block">
+					<ul id="tabs" class="tabs">
+						<li class="t1"><a href="#" class="tabs" data-tab="tab1"></a></li>
+						<li class="t2"><a href="#" class="tabs" data-tab="tab2"></a></li>
+						<li class="t3"><a href="#" class="tabs" data-tab="tab3"></a></li>
+					</ul>
+					<div class="tab-content">
+						<div class="t1 tab__block" id="tab1">
+								<div class="row">
+					<div class="col-lg-6 offset-lg-3 col-md-12 col-sm-12">
+						<div class="sale-content">
+							<div class="row">
+					<div class="col-lg-9 offset-lg-2 col-md-12 col-sm-12">
+						<div class="sale-title">
+							<h4>Продажа недвижимости</h4>
+							<p>– это не везение и не лотерея. Это управляемый процесс. И у нас есть
+							технология для управления им. Наша задача – выбрать лучшего покупателя
+							из всех имеющихся на рынке. Благодаря этому вы получите желаемую 
+							сумму за объект в оговоренные сроки</p>
+						</div>						
+					</div>
+				</div>
+							<h6>Преимущества работы с нами:</h6>
+							<div class="sale-logo">
+								<img src="img/main-logo.png" alt="">
+							</div>
+							<div class="row">								
+								<div class="col-lg-4 col-md-12 col-sm-12">
+									<ul class="left-ul">
+										<li><strong>Сервис</strong><br>
+										Вы не будете переживать о каждой детали, мы обо всем позаботимся
+										и подготовим отчет</li>
+										<li><strong>Звонки</strong><br>
+										Вам не придется отвечать на огромное количество звонков в любое время дня и ночи. Наш call-центр не пропустит ни одного 
+										и сумеет убедительно представить 
+										ваш объект среди аналогичных предложений</li>
+										<li><strong>Командная работа</strong><br>
+										Всю работу по продаже объекта 
+										недвижимости выполняет не один 
+										человек, а команда из маркетолога, 
+										менеджера по продажам, call-центра, 
+										юриста и эксперта недвижимости.
+										Это обеспечивает более качественную 
+										проработку каждого процесса</li>
+									</ul>
+								</div>
+								<div class="col-lg-4 offset-lg-4 col-md-12 col-sm-12">
+									<ul class="right-ul">	
+										<li><strong>Комфорт</strong><br>
+										Готовы предложить варианты сотрудничества, которые 
+										подойдут именно Вам</li>
+										<li><strong>Переговоры</strong><br>  
+										Этим занимается опытный 
+										сотрудник, который максимально 
+										отстоит Ваши интересы</li>
+										<li><strong>Реклама</strong><br>
+										Наши маркетологи знают где и 
+										какую рекламу разместить, 
+										чтобы о вашем объекте узнали 
+										все потенциальные покупатели</li>
+										<li><strong>Показы</strong><br>
+										Менеджеры проводят показы так, чтобы покупатели чувствовали конкуренцию. И после получения всех предложений проводят торги</li>
+									</ul>
+								</div>
+								<div class="row">
+					<div class="col-lg-7 offset-lg-3 col-md-12 col-sm-12">
+						<div class="sale-foot">
+							<p>Задача нашей работы - продать недвижимость по максимально возможной 
+							цене в необходимый срок, чтобы при этом вы остались довольны
+							</p>
+							<p>Для более детальной информации свяжитесь с нами либо оставьте свои 
+							контакты для связи</p>
+							<div class="foot-btn">
+								<a href="#">Перезвоните мне</a>
+							</div>
+						</div>
+					</div>
+				</div>		
+							</div>												
+						</div>
+					</div>
+				</div>
+						</div>
+						<div class="t2 tab__block" id="tab2">
+							<div class="row" >
+								<div class="col-lg-6 offset-lg-3 col-md-12 col-sm-12">
+									<div class="sale-content">
+										
+							<div class="row">
+								<div class="col-lg-8 offset-lg-2 col-md-12 col-sm-12">
+									<div class="sale-title">
+										<h4>Покупка недвижимости</h4>
+											<p>- это непросто и ответственно. Из массы предложений 
+											нужно отфильтровать лучшее и вложиться в бюджет. 
+											Именно за этим и обращаются к нам
+											</p>
+											<h6>Что мы для вас сделаем:</h6>
+									</div>						
+								</div>
+							</div>
+							<div class="sale-logo">
+								<img src="img/main-logo.png" alt="">
+							</div>
+							<div class="row">								
+								<div class="col-lg-4 col-md-12 col-sm-12">
+									<ul class="left-ul">
+										<li><strong>Подберем варианты</strong><br>
+											Существуют разные источники, 
+										о которых вы можете не знать. Проанализируем существующие предложения, отберем актуальные. Таким образом, вы экономите 
+											свое время
+										</li>
+										<li><strong>Проконтролируем бюрократическую часть</strong><br>
+											Наши менеджеры знают какие справки и документы нужны при продаже квартиры. Их задача – избежать неожиданностей во время сделки и предусмотреть все заранее. Юрист проверит документы на квартиру и возможность 
+												совершения сделки
+										</li>
+										
+									</ul>
+								</div>
+								<div class="col-lg-4 offset-lg-4 col-md-12 col-sm-12">
+									<ul class="right-ul">	
+										<li><strong>Организуем просмотры</strong><br>
+											Call-центр договорится о всех просмотрах и распределит их во времени. Вам нужно только назвать время и дни, подходящее вам
+										</li>
+										<li><strong>Проведем переговоры</strong><br> 
+										При торгах по цене за понравившийся объект менеджер по продажам будет отстаивать ваши интересы. Для нас 
+										важно, чтобы вы остались довольны исходом переговоров 
+										</li>
+										<li><strong>Организуем обмен</strong><br>
+											Если вам нужно сначала продать недвижимость, а уже после купить. Наши сотрудники знают как сделать это максимально выгодно и удобно
+										</li>
+										
+									</ul>
+								</div>		
+							</div>
+							<div class="row">
+					<div class="col-lg-7 offset-lg-3 col-md-12 col-sm-12">
+						<div class="sale-foot">
+								<p>Для нас важен не только конечный результат, но и сам процесс работы с клиентами. Мы нацелены на то, чтобы наши клиенты оставались довольны 
+								работой с нами и нас рекомендовали. 
+							</p>
+							<p>Для более детальной информации свяжитесь с нами либо оставьте свои 
+								контакты для связи</p>
+							<div class="foot-btn">
+								<a href="#">Перезвоните мне</a>
+							</div>
+						</div>
+					</div>
+				</div>												
+						</div>
+					</div>
+				</div>
+						</div>
+						<div class="t3 tab__block" id="tab3">
+							<div class="row">
+					<div class="col-lg-6 offset-lg-3 col-md-12 col-sm-12">
+						<div class="sale-content">
+							<div class="row">
+								<div class="col-lg-8 offset-lg-2 col-md-12 col-sm-12">
+									<div class="sale-title">
+										<h4>Аренда</h4>
+											<p>По вашему запросу мы с радостью займемся арендой
+											</p>
+											<h6>Поможем как сдать, так и найти недвижимость</h6>
+											
+									</div>						
+								</div>
+							</div>
+							
+							<div class="sale-logo">
+								<img src="img/main-logo.png" alt="">
+							</div>
+							<div class="row">								
+								<div class="col-lg-4 col-md-12 col-sm-12">
+									<ul class="left-ul">
+										<li>Наши менеджеры легко ориентируются 
+											в большом потоке вариантов и клиентов. 
+											<strong>Отстоят ваши интересы</strong>, если 
+											потребуется о чем-то договариваться</li>
+										<li><div class="tab3foto"></div></li>
+										<li>В случае, когда вы снимаете недвижимость, 
+											<strong>обязательно удостоверимся</strong>, 
+											что она от собственника
+										</li>
+									</ul>
+								</div>
+								<div class="col-lg-4 offset-lg-4 col-md-12 col-sm-12">
+									<ul class="right-ul">	
+										<li><div class="tab2foto"></div></li>
+										<li><strong>Поможем составить 
+											договор</strong> аренды 
+											и обсудить его детали</li>
+										<li><div class="tab1foto"></div></li>
+										
+									</ul>
+								</div>		
+							</div>
+							<div class="row">
+					<div class="col-lg-8 offset-lg-3 col-md-12 col-sm-12">
+						<div class="sale-foot">
+								<p>Если хотите снять или сдать недвижимость, свяжитесь с нами либо 
+																</p>
+							
+							<div class="foot-btn">
+								<a href="#">Перезвоните мне</a>
+							</div>
+						</div>
+					</div>
+				</div>													
+						</div>
+					</div>
+				</div>
+						</div>
+					</div>
+				</div>
+				
+			
+				
+				<div class="block-square">
+					<div class="square-one"></div>
+					<div class="square-two"></div>
+					<div class="square-three"></div>
+					<div class="square-four"></div>
+					<div class="square-five"></div>
+					<div class="square-six"></div>
+				</div>
+			</section>	
+			<section class="slider">
+				<div id="carouselControlsFirst" class="carousel slide" data-ride="carousel">
+				  <div class="carousel-inner">
+				    <div class="carousel-item active">
+				    	<div class="quote-right"><i class="fas fa-quote-right"></i></div>
+
+				    	<blockquote>
+				    		
+				    		<p>Огромное спасибо Центру недвижимости Контраст за 
+							оперативность в поиске квартиры и внимательность 
+							к клиенту. Вы большие молодцы. Желаю Вам успехов и 
+							роста. С большим удовольствием буду рекомендовать 
+							Вас друзьям и знакомым!
+							</p>
+							<p class="name">Наталья Терентьева</p>
+						
+				    	</blockquote>
+				    	<div class="quote-left"><i class="fas fa-quote-left"></i></div>						
+				    </div>
+				    <div class="carousel-item">
+				    	<div class="quote-right"><i class="fas fa-quote-right"></i></div>
+						<blockquote>
+						
+				    		<p>Огромное спасибо Центру недвижимости Контраст за 
+							оперативность в поиске квартиры и внимательность 
+							к клиенту. Вы большие молодцы. Желаю Вам успехов и 
+							роста. С большим удовольствием буду рекомендовать 
+							Вас друзьям и знакомым!
+							</p>
+							<p class="name">Наталья Терентьева</p>
+							
+				    	</blockquote>
+				    	<div class="quote-left"><i class="fas fa-quote-left"></i></div>
+
+				    </div>
+				    <div class="carousel-item">	
+				    <div class="quote-right"><i class="fas fa-quote-right"></i></div>			   
+						<blockquote>
+							
+				    		<p>Огромное спасибо Центру недвижимости Контраст за 
+							оперативность в поиске квартиры и внимательность 
+							к клиенту. Вы большие молодцы. Желаю Вам успехов и 
+							роста. С большим удовольствием буду рекомендовать 
+							Вас друзьям и знакомым!
+							</p>
+							<p class="name">Наталья Терентьева</p>
+						
+				    	</blockquote>
+				    	<div class="quote-left"><i class="fas fa-quote-left"></i></div>
+				    </div>
+				  </div>
+				  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+				    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				    <span class="sr-only">Previous</span>
+				  </a>
+				  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+				    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+				    <span class="sr-only">Next</span>
+				  </a>
+				</div>
+			</section>	
+			<section class="ourteam">
+				
+				<div id="carouselControlsSecond" class="carousel slide team" data-ride="carousel">
+					<div class="ourteam-title">
+					<h4>Наша команда</h4>
+					</div>
+				  <div class="carousel-inner inner-team">
+				    <div class="carousel-item active">
+				    	<div class="ourteam-content">
+				    		<div class="team-block-first">
+					    		
+					    		<p>Екатерина</p>
+				    		</div>	
+					    	<div class="team-block-second">
+					    		
+					    		<p>Валентин</p>
+					    	</div>
+					    	<div class="team-block-third">
+					    	
+					    		<p>Никита</p>
+					    	</div>
+					    	<div class="team-block-fourth">
+					    		
+					    		<p>Адалат</p>
+					    	</div>	
+					    </div>				    			
+				    </div>
+				    <div class="carousel-item">
+						<div class="ourteam-content">
+				    		<div class="team-block-first">
+					    		
+					    		<p>Екатерина</p>
+				    		</div>	
+					    	<div class="team-block-second">
+					    		
+					    		<p>Валентин</p>
+					    	</div>
+					    	<div class="team-block-third">
+					    	
+					    		<p>Никита</p>
+					    	</div>
+					    	<div class="team-block-fourth">
+					    		
+					    		<p>Адалат</p>
+					    	</div>	
+					    </div>	
+				    </div>
+				    <div class="carousel-item">				   
+						<div class="ourteam-content">
+				    		<div class="team-block-first">
+					    		
+					    		<p>Екатерина</p>
+				    		</div>	
+					    	<div class="team-block-second">
+					    		
+					    		<p>Валентин</p>
+					    	</div>
+					    	<div class="team-block-third">
+					    	
+					    		<p>Никита</p>
+					    	</div>
+					    	<div class="team-block-fourth">
+					    		
+					    		<p>Адалат</p>
+					    	</div>	
+					    </div>	
+				    </div>
+				  </div>
+				  <a class="carousel-control-prev team-control" href="#carouselExampleControls" role="button" data-slide="prev">
+				    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				    <span class="sr-only">Previous</span>
+				  </a>
+				  <a class="carousel-control-next team-control" href="#carouselExampleControls" role="button" data-slide="next">
+				    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+				    <span class="sr-only">Next</span>
+				  </a>
+				</div>
+			</section>	
+		</main>	
+			<footer>
+				<div class="footer-first">
+					<div class="blue"></div>
+				</div>
+				<div class="footer-second"></div>
+				<div class="footer-third">
+					<div class="row">
+						<div class="col-lg-4">
+							<div class="footer-content-left">
+								<div class="footer-logo">
+									<img src="img/footer-logo.png" alt="">
+								</div>
+								<p>Центр недвижимости Контраст<br>
+								продажа, покупка и аренда квартир и домов</p>
+								<ul class="footer-ul">
+									<li>О центре</li>
+									<li>Услуги</li>
+									<li class="ml">Продажа недвижимости</li>
+									<li class="ml">Покупка недвижимости</li>
+									<li>Аренда</li>
+									<li>Наша команда</li>
+									<li>Контакты</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-lg-4 offset-lg-4">
+							<div class="footer-content-right">
+							<p class="adress">Харьков, ул. Чернышевская 13 БЦ «Лира», 4 этаж, офис 401</p>
+								<a href="tel:+380973666584">+38 097 366 65 84</a>
+								<a href="mailto:contrust.kh@gmail.com">contrust.kh@gmail.com</a>
+							<p class="time">Время работы:  Пн - Пт:  9:00 - 19:00</p>
+							<p>Сб: 10:00 - 16:00</p>
+							<div class="footer-icons">
+								<a href="#"><i class="fab fa-facebook"></i></a>
+								<a href="#"><i class="fab fa-instagram"></i></a>
+							</div>
+							<div class="copyright">
+								<p>&#169; 2018/ Все права защищены</p>
+							</div>
+							</div>
+						</div>
+					</div>					
+				</div>
+				<div class="footer-form">
+					<div class="form-title">
+						<p>Оставьте ваши контактные 
+						данные и наш консультант 
+						свяжется с вами</p>
+					</div>
+					<input type="text" placeholder="Имя">
+					<input type="text" placeholder="Телефон">
+					<div class="form-btn">
+						<a href="#" data-toggle="popover" data-placement="top" data-content="Заявка отправлена
+Наш консультант перезвонит Вам 
+в ближайшее время.">Перезвоните мне</a>
+					</div>
+				</div>	
+			</footer>			
+	</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+<script>
+	$(function () {
+  	$('[data-toggle="popover"]').popover()
+
+})
+
+</script>
+</body>
+</html>
